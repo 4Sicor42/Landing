@@ -1,993 +1,318 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Realco - Rent</title>
-        <meta content="width=device-width, initial-scale=1" name="viewport"/>
-        <meta content="Webflow" name="generator"/>
-        <link href="assets/styles.css" rel="stylesheet" type="text/css"/>
-        <link rel="icon" type="images/x-icon" href="./assets/smalllogo.png">
-    </head>
-    <body>
-        <div class="page-wrapper">
-            <div class="page-hero-wrapper">
-                <section class="banner-component">
-                    <div class="page-padding">
-                        <div class="banner-content-wrapper">
-                            <div class="banner-content">
-                                <div>Select a language -> </div>
-                                <div class="container-buttons">
-                                    <input type="image" class="lang-buttons" img src="assets/en.png" alt="Button EN"></input>
-                                    <input type="image" class="lang-buttons" img src="assets/ru.png" alt="Button Ru"></input>
+<head>
+    <meta charset="utf-8" />
+    <title data-i18="realco">Realco - Rent</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="Webflow" name="generator" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="dark.css" id="theme-link">
+    <link rel="icon" type="images/x-icon" href="./assets/smalllogo.png">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="page-hero-wrapper">
+            <section class="banner-component">
+                <div class="page-padding">
+                    <div class="banner-content-wrapper">
+                        <div class="banner-content">
+                            <div class="container-buttons" data-i18="lang">Select a language -> </div>
+                            <div class="container-buttons">
+                                <input type="image" id="languageButtonEN" class="lang-buttons" src="assets/en.png" alt="Button EN" >
+                                <input type="image" id="languageButtonRU" class="lang-buttons" src="assets/ru.png" alt="Button Ru" >
+                                <div class="container-buttons" data-i18="theme">Select theme -></div>
+                                <div><input type="image" id="dark-theme-button" src="assets/dark-theme.svg" class="dark-theme-button"></div>
+                            </div>
+                        </div>
+                        <a data-w-id="ce4efcbd-0bb6-36ed-b895-3edef32ec03a" href="#" class="banner-close-button w-inline-block">
+                            <img src="assets/Close_Icon.svg" alt="close" class="banner-close-image" />
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <div data-collapse="medium" data-animation="default" data-duration="400" data-w-id="7da559f8-1897-df80-7898-333c5dcbffaf" data-easing="ease" data-easing2="ease" role="banner" class="navbar-component w-nav">
+                <div class="navbar-container">
+                    <a href="#" aria-current="page" class="navbar-logo-link w-nav-brand w--current">
+                        <img src="assets/Brand.svg" alt="" class="navbar-logo" />
+                    </a>
+                    <div class="navbar-menu-wrapper">
+                        <nav role="navigation" class="navbar-menu w-nav-menu">
+                            <a href="" aria-current="page" class="navbar-link w-nav-link" data-i18="navbutthome">Home</a>
+                            <div data-hover="false" data-delay="100" data-w-id="7da559f8-1897-df80-7898-333c5dcbffb7" class="navbar-menu-dropdown w-dropdown">
+                                <div class="navbar-dropdown-toggle w-dropdown-toggle">
+                                    <div class="text-size-regular navbar-link w-nav-link" data-i18="navbuttprop">Properties</div>
+                                    <div class="icon-small">expand_more</div>
                                 </div>
                             </div>
-                            <a data-w-id="ce4efcbd-0bb6-36ed-b895-3edef32ec03a" href="#" class="banner-close-button w-inline-block">
-                                <img src="assets/Close_Icon.svg"  alt="" class="banner-close-image"/>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-                <div data-collapse="medium" data-animation="default" data-duration="400" data-w-id="7da559f8-1897-df80-7898-333c5dcbffaf" data-easing="ease" data-easing2="ease" role="banner" class="navbar-component w-nav">
-                    <div class="navbar-container">
-                        <a href="#" aria-current="page" class="navbar-logo-link w-nav-brand w--current">
-                            <img src="assets/Brand.svg"  alt="" class="navbar-logo"/>
-                        </a>
-                        <div class="navbar-menu-wrapper">
-                            <nav role="navigation" class="navbar-menu w-nav-menu">
-                                <a href="" aria-current="page" class="navbar-link w-nav-link">Home</a>
-                                <div data-hover="false" data-delay="100" data-w-id="7da559f8-1897-df80-7898-333c5dcbffb7" class="navbar-menu-dropdown w-dropdown">
-                                    <div class="navbar-dropdown-toggle w-dropdown-toggle">
-                                        <div class="text-size-regular navbar-link w-nav-link">Properties</div>
-                                        <div class="icon-small">expand_more</div>
-                                    </div>
-                                </div>
-                                <a href="" class="navbar-link w-nav-link">About</a>
-                                <a href="" class="navbar-link w-nav-link">Contact</a>
-                                <div>
-                                    <a data-w-id="607be377-9ce8-3c4e-3247-86d2df2c77d0" href="#" class="navbar-modal-link w-inline-block">
-                                        <div class="icon-small">search</div>
-                                        <div class="navbar-link w-nav-link">Search</div>
-                                    </a>
-                                    <div class="modal-component">
-                                        <div class="modal-content-wrapper">
-                                            <div class="margin-bottom margin-large">
-                                                <div class="text-align-center">
-                                                    <div class="max-width-large align-center">
-                                                        <div class="margin-bottom margin-xsmall">
-                                                            <h2>Search properties</h2>
-                                                        </div>
-                                                        <p class="text-size-medium">Dolor sit amet consectetur adipiscing elit.</p>
+                            <a href="" class="navbar-link w-nav-link" data-i18="navbuttabout">About</a>
+                            <a href="" class="navbar-link w-nav-link" data-i18="navbuttcontact">Contact</a>
+                            <div>
+                                <a data-w-id="607be377-9ce8-3c4e-3247-86d2df2c77d0" href="#" class="navbar-modal-link w-inline-block">
+                                    <div class="icon-small">search</div>
+                                    <div class="navbar-link w-nav-link" data-i18="navbuttsrch">Search</div>
+                                </a>
+                                <div class="modal-component">
+                                    <div class="modal-content-wrapper">
+                                        <div class="margin-bottom margin-large">
+                                            <div class="text-align-center">
+                                                <div class="max-width-large align-center">
+                                                    <div class="margin-bottom margin-xsmall">
+                                                        <h2 data-i18="sprop">Search properties</h2>
                                                     </div>
+                                                    <p class="text-size-medium" data-i18="pain">Pain should be followed by the client's education.</p>
                                                 </div>
                                             </div>
-                                            <form action="" class="search w-form">
-                                                <input type="search" class="form-input is-last w-input" maxlength="256" name="query" placeholder="Search…" id="search-2" required=""/>
-                                                <input type="submit" value="Search" class="button w-button"/>
-                                            </form>
-                                            <a data-w-id="c7e8b4fe-9894-fb69-ab69-5ef271698897" href="#" class="modal-close-button w-inline-block">
+                                        </div>
+                                        <form action="" class="search w-form">
+                                            <input type="search" class="form-input is-last w-input" maxlength="256" name="query" placeholder="Search…" id="search-2" required="" />
+                                            <input type="submit" value="Search" class="button w-button" />
+                                        </form>
+                                        <a data-w-id="c7e8b4fe-9894-fb69-ab69-5ef271698897" href="#" class="modal-close-button w-inline-block">
+                                        </a>
+                                    </div>
+                                    <div data-w-id="c7e8b4fe-9894-fb69-ab69-5ef27169889a" class="modal-background-overlay"></div>
+                                </div>
+                            </div>
+                            <div class="align-left hide-desktop-show-landscape">
+                                <a href="#" class="button is-small w-button" data-i18="navbuttfind" onclick="switchImag()">Find a property</a>
+                            </div>
+                        </nav>
+                        <div class="navbar-menu-buttons">
+                            <div data-node-type="commerce-cart-wrapper" class="w-commerce-commercecartwrapper">
+                                <a href="" class="w-commerce-commercecartopenlink button-secondary is-small is-cart w-inline-block">
+                                    <div class="icon-small">shopping_bag</div>
+                                    <div class="w-inline-block" data-i18="cart">Cart</div>
+                                </a>
+                                <div data-node-type="commerce-cart-container-wrapper" style="display:none" class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal">
+                                    <div data-node-type="commerce-cart-container" role="dialog" class="w-commerce-commercecartcontainer cart-container">
+                                        <div class="w-commerce-commercecartheader">
+                                            <h4 class="w-commerce-commercecartheading heading-xsmall">Your Cart</h4>
+                                            <a href="#" class="w-commerce-commercecartcloselink w-inline-block">
                                             </a>
                                         </div>
-                                        <div data-w-id="c7e8b4fe-9894-fb69-ab69-5ef27169889a" class="modal-background-overlay"></div>
                                     </div>
                                 </div>
-                                <div class="align-left hide-desktop-show-landscape">
-                                    <a href="#" class="button is-small w-button">Find a property</a>
+                            </div>
+                            <a href="#" class="button is-small hide-mobile-landscape w-button" data-i18="navbuttfind">Find a property</a>
+                            <div class="navbar-menu-button w-nav-button">
+                                <div class="menu-icon">
+                                    <div class="menu-icon-line-top"></div>
+                                    <div class="menu-icon-line-middle">
+                                        <div class="menu-icon-line-middle-inner"></div>
+                                    </div>
+                                    <div class="menu-icon-line-bottom"></div>
                                 </div>
-                            </nav>
-                            <div class="navbar-menu-buttons">
-                                <div data-node-type="commerce-cart-wrapper" class="w-commerce-commercecartwrapper">
-                                    <a href="" class="w-commerce-commercecartopenlink button-secondary is-small is-cart w-inline-block" >
-                                        <div class="icon-small">shopping_bag</div>
-                                        <div class="w-inline-block">Cart</div>
-                                    </a>
-                                    <div data-node-type="commerce-cart-container-wrapper" style="display:none" class="w-commerce-commercecartcontainerwrapper w-commerce-commercecartcontainerwrapper--cartType-modal">
-                                        <div data-node-type="commerce-cart-container" role="dialog" class="w-commerce-commercecartcontainer cart-container">
-                                            <div class="w-commerce-commercecartheader">
-                                                <h4 class="w-commerce-commercecartheading heading-xsmall">Your Cart</h4>
-                                                <a href="#"class="w-commerce-commercecartcloselink w-inline-block">
-                                                </a>                                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <header class="section-home-header">
+                <div class="w-layout-grid home_header_component theme-dark">
+                    <div id="w-node-ae8b7137-289c-8f02-876c-683dda740ad1-e7a8dc76" class="home-header-content-wrapper">
+                        <div id="w-node-_0f907255-4365-1d6e-0a00-ebf7e5643715-e7a8dc76" class="home-header-content">
+                            <div class="margin-bottom margin-medium">
+                                <div class="align-left">
+                                    <div class="tagline-wrapper">
+                                        <div class="text-size-small text-weight-medium" data-i18="dreampalace">Find your dream place</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="margin-bottom margin-small">
+                                <h1 data-w-id="0f907255-4365-1d6e-0a00-ebf7e5643717" class="heading-xxlarge" data-i18="findhouse">Find house for your family in minutes</h1>
+                            </div>
+                            <p class="text-size-large" data-i18="aenean">Aenean members of the country are easy to find, even if they are big. Sometimes it will be necessary to take care of the needs of some people in pure mauris.</p>
+                            <div data-w-id="0f907255-4365-1d6e-0a00-ebf7e564371b" class="margin-top margin-medium">
+                                <form action="" class="home-header-form-block w-form">
+                                    <input type="search" class="form-input is-search w-input" maxlength="256" name="query" placeholder="Search" id="search" required="" />
+                                    <input type="submit" value="Find property" class="button w-button" />
+                                    <img src="assets/Search.svg" alt="" class="search-icon" />
+                                </form>
+                            </div>
+                        </div>
+                        <img src="assets/Neutral%20300%20Top%20Left.svg"  alt="" class="graphic-top-left" />
+                        <img src="assets/Neutral%20300%20Bottom%20Right.svg" alt="" class="graphic-header-bottom-right" />
+                    </div>
+                    <div class="home-header-image-wrapper">
+                        <img src="assets/627aa73372c045f74c62485e_ctyssSFmXmU.jpg" id="imageSwitcher" sizes="(max-width: 991px) 100vw, 50vw" alt="" class="header-image" />
+                    </div>
+                </div>
+            </header>
+        </div>
+        <main class="main-wrapper">
+            <section class="section-logo">
+                <div class="page-padding">
+                    <div class="container-large">
+                        <div class="logo-component">
+                            <div class="logo-content-left">
+                                <p data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d5a" class="text-size-medium text-weight-medium text-color-neutral-900" data-i18="worldbest">As seen on the world &#x27;s best magazines and media</p>
+                            </div>
+                            <div class="logo-logo-list">
+                                <div id="w-node-_1fcff0db-3497-3eb3-d430-7ddcb09e5d5d-b09e5d54" data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d5d" class="logo-wrapper">
+                                    <img src="assets/logoipsum_1.svg" alt="" class="logo-image" />
+                                </div>
+                                <div data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d63" class="logo-wrapper">
+                                    <img src="assets/logoipsum_2.svg" alt="" class="logo-image" />
+                                </div>
+                                <div id="w-node-_1fcff0db-3497-3eb3-d430-7ddcb09e5d65-b09e5d54" data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d65" class="logo-wrapper">
+                                    <img src="assets/logoipsum_3.svg" alt="" class="logo-image" />
+                                </div>
+                                <div data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d5f" class="logo-wrapper">
+                                    <img src="assets/logoipsum_4.svg" alt="" class="logo-image" />
+                                </div>
+                                <div data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d61" class="logo-wrapper">
+                                    <img src="assets/logoipsum_5.svg" alt="" class="logo-image" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-how-it-works">
+                <div class="page-padding">
+                    <div class="container-large">
+                        <div class="padding-vertical padding-xxhuge">
+                            <div class="how-it-works-component">
+                                <div class="margin-bottom margin-xxlarge">
+                                    <div>
+                                    <div class="player">
+                                        <audio id="audioplayer" src="./ZEZE (Marimba Remix).mp3" controls></audio>     
+                                    </div>
+                                    </div>
+                                    <div class="text-align-center">
+                                        <div class="max-width-large">
+                                            <div class="margin-bottom margin-small">
+                                                <h2 data-w-id="52b8aff0-7f1c-ca46-2d38-3c99a58f406b" class="heading-xlarge" data-i18="works">How it works</h2>
+                                            </div>
+                                            <p data-w-id="52b8aff0-7f1c-ca46-2d38-3c99a58f406d" class="text-size-medium" data-i18="now">Now the cost is now at the cost. It's something that happens to my kids. Maecenas is a casino player.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-layout-grid how-it-works-list">
+                                    <div id="w-node-_52b8aff0-7f1c-ca46-2d38-3c99a58f4070-e7a8dc76" data-w-id="52b8aff0-7f1c-ca46-2d38-3c99a58f4070" class="card-item text-align-center">
+                                        <div class="margin-bottom margin-medium">
+                                            <div class="icon-wrapper">
+                                                <div class="icon-1x1-medium">house</div>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <a href="#" class="button is-small hide-mobile-landscape w-button">Find a property</a>
-                                <div class="navbar-menu-button w-nav-button">
-                                    <div class="menu-icon">
-                                        <div class="menu-icon-line-top"></div>
-                                        <div class="menu-icon-line-middle">
-                                            <div class="menu-icon-line-middle-inner"></div>
+                                        <div class="margin-bottom margin-small">
+                                            <h3 class="heading-small" data-i18="property">Find property</h3>
                                         </div>
-                                        <div class="menu-icon-line-bottom"></div>
+                                        <p data-i18="oda">Odales mauris who is easy land, or sometimes large land. Chat needs some support. In pure mauris, the author is not a teenager.</p>
+                                    </div>
+                                    <div id="w-node-_5c419849-f8fb-8249-bc65-0c77728efaa8-e7a8dc76" data-w-id="5c419849-f8fb-8249-bc65-0c77728efaa8" class="card-item text-align-center">
+                                        <div class="margin-bottom margin-medium">
+                                            <div class="icon-wrapper">
+                                                <div class="icon-1x1-medium">receipt</div>
+                                            </div>
+                                        </div>
+                                        <div class="margin-bottom margin-small">
+                                            <h3 class="heading-small" data-i18="deal">Make a deal</h3>
+                                        </div>
+                                        <p data-i18="child">Children are welcome. For it was said, that he was from the end of his life, an urn, except for the care of the doctor, with easy arrows, the torturer and me hated him. </p>
+                                    </div>
+                                    <div id="w-node-_483a371b-4d97-6288-9a8c-c541cd9346cc-e7a8dc76" data-w-id="483a371b-4d97-6288-9a8c-c541cd9346cc" class="card-item text-align-center">
+                                        <div class="margin-bottom margin-medium">
+                                            <div class="icon-wrapper">
+                                                <div class="icon-1x1-medium">key</div>
+                                            </div>
+                                        </div>
+                                        <div class="margin-bottom margin-small">
+                                            <h3 class="heading-small">Get your keys</h3>
+                                        </div>
+                                        <p data-i18="alco">There is no alcohol to drink. It's time to make up a pillow. Always at home, the fear of life is a result.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <header class="section-home-header">
-                    <div class="w-layout-grid home-header-component">
-                        <div id="w-node-ae8b7137-289c-8f02-876c-683dda740ad1-e7a8dc76" class="home-header-content-wrapper">
-                            <div id="w-node-_0f907255-4365-1d6e-0a00-ebf7e5643715-e7a8dc76" class="home-header-content">
+            </section>
+            <section class="section-feature-1">
+                <div class="page-padding">
+                    <div class="container-large">
+                        <div class="w-layout-grid feature-component">
+                            <div class="feature-content">
                                 <div class="margin-bottom margin-medium">
                                     <div class="align-left">
-                                        <div data-w-id="d51c4d9a-a35a-6487-a731-be7f9d02162c" class="tagline-wrapper">
-                                            <div class="text-size-small text-weight-medium">Find your dream place</div>
+                                        <div class="tagline-wrapper">
+                                            <div class="text-size-small text-weight-medium" data-i18="comfort">Comfort first</div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="margin-bottom margin-small">
-                                    <h1 data-w-id="0f907255-4365-1d6e-0a00-ebf7e5643717" class="heading-xxlarge">Find house for your family in minutes</h1>
+                                <div class="margin-bottom margin-medium">
+                                    <h2 data-w-id="1516e1a1-980f-f651-641e-4e17f6e54e20" class="heading-xlarge" data-i18="best">The best houses for family comfort</h2>
                                 </div>
-                                <p data-w-id="0f907255-4365-1d6e-0a00-ebf7e5643719" class="text-size-large">Aenean sodales mauris quis tellus facilisis, vel mattis magna. Interdum curabitur eget aliquam elit in mauris purus.</p>
-                                <div data-w-id="0f907255-4365-1d6e-0a00-ebf7e564371b" class="margin-top margin-medium">
-                                    <form action="" class="home-header-form-block w-form">
-                                        <input type="search" class="form-input is-search w-input" maxlength="256" name="query" placeholder="Search" id="search" required=""/>
-                                        <input type="submit" value="Find property" class="button w-button"/>
-                                        <img src="assets/Search.svg"  alt="" class="search-icon"/>
-                                    </form>
-                                </div>
-                            </div>
-                            <img src="assets/Neutral%20300%20Top%20Left.svg"  id="w-node-e979ba80-75ee-f708-9818-2b06d2f8d450-e7a8dc76" alt="" class="graphic-top-left"/>
-                            <img src="assets/Neutral%20300%20Bottom%20Right.svg"  alt="" class="graphic-header-bottom-right"/>
-                        </div>
-                        <div class="home-header-image-wrapper">
-                            <img src="assets/627aa73372c045f74c62485e_ctyssSFmXmU.jpg"  data-w-id="0f907255-4365-1d6e-0a00-ebf7e564372c" sizes="(max-width: 991px) 100vw, 50vw" alt="" class="header-image"/>
-                        </div>
-                    </div>
-                </header>
-            </div>
-            <main class="main-wrapper">
-                <section class="section-logo">
-                    <div class="page-padding">
-                        <div class="container-large">
-                            <div class="logo-component">
-                                <div class="logo-content-left">
-                                    <p data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d5a" class="text-size-medium text-weight-medium text-color-neutral-900">As seen on the world &#x27;s best magazines and media</p>
-                                </div>
-                                <div class="logo-logo-list">
-                                    <div id="w-node-_1fcff0db-3497-3eb3-d430-7ddcb09e5d5d-b09e5d54" data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d5d" class="logo-wrapper">
-                                        <img src="assets/logoipsum_1.svg"  alt="" class="logo-image"/>
-                                    </div>
-                                    <div data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d63" class="logo-wrapper">
-                                        <img src="assets/logoipsum_2.svg"  alt="" class="logo-image"/>
-                                    </div>
-                                    <div id="w-node-_1fcff0db-3497-3eb3-d430-7ddcb09e5d65-b09e5d54" data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d65" class="logo-wrapper">
-                                        <img src="assets/logoipsum_3.svg"  alt="" class="logo-image"/>
-                                    </div>
-                                    <div data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d5f" class="logo-wrapper">
-                                        <img src="assets/logoipsum_4.svg"  alt="" class="logo-image"/>
-                                    </div>
-                                    <div data-w-id="1fcff0db-3497-3eb3-d430-7ddcb09e5d61" class="logo-wrapper">
-                                        <img src="assets/logoipsum_5.svg"  alt="" class="logo-image"/>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section-how-it-works">
-                    <div class="page-padding">
-                        <div class="container-large">
-                            <div class="padding-vertical padding-xxhuge">
-                                <div class="how-it-works-component">
-                                    <div class="margin-bottom margin-xxlarge">
-                                        <div class="text-align-center">
-                                            <div class="max-width-large">
-                                                <div class="margin-bottom margin-small">
-                                                    <h2 data-w-id="52b8aff0-7f1c-ca46-2d38-3c99a58f406b" class="heading-xlarge">How it works</h2>
-                                                </div>
-                                                <p data-w-id="52b8aff0-7f1c-ca46-2d38-3c99a58f406d" class="text-size-medium">Nunc laoreet consequat nunc at consequat. Praesent aliquam mi id efficitur pellentesque. Maecenas varius felis felis.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="w-layout-grid how-it-works-list">
-                                        <div id="w-node-_52b8aff0-7f1c-ca46-2d38-3c99a58f4070-e7a8dc76" data-w-id="52b8aff0-7f1c-ca46-2d38-3c99a58f4070" class="card-item text-align-center">
-                                            <div class="margin-bottom margin-medium">
-                                                <div class="icon-wrapper">
-                                                    <div class="icon-1x1-medium">house</div>
-                                                </div>
-                                            </div>
-                                            <div class="margin-bottom margin-small">
-                                                <h3 class="heading-small">Find property</h3>
-                                            </div>
-                                            <p>Odales mauris quis tellus facilisis, vel mattis magna interdum. Curabitur eget aliquam elit. In mauris purus, auctor a eleifend non.</p>
-                                        </div>
-                                        <div id="w-node-_5c419849-f8fb-8249-bc65-0c77728efaa8-e7a8dc76" data-w-id="5c419849-f8fb-8249-bc65-0c77728efaa8" class="card-item text-align-center">
-                                            <div class="margin-bottom margin-medium">
-                                                <div class="icon-wrapper">
-                                                    <div class="icon-1x1-medium">receipt</div>
-                                                </div>
-                                            </div>
-                                            <div class="margin-bottom margin-small">
-                                                <h3 class="heading-small">Make a deal</h3>
-                                            </div>
-                                            <p>Pellentesque suscipit mauris. Nam dictum, erat a volutpat varius, urna nisi sollicitudin orci, sagittis facilisis odio tortor ac mi. </p>
-                                        </div>
-                                        <div id="w-node-_483a371b-4d97-6288-9a8c-c541cd9346cc-e7a8dc76" data-w-id="483a371b-4d97-6288-9a8c-c541cd9346cc" class="card-item text-align-center">
-                                            <div class="margin-bottom margin-medium">
-                                                <div class="icon-wrapper">
-                                                    <div class="icon-1x1-medium">key</div>
-                                                </div>
-                                            </div>
-                                            <div class="margin-bottom margin-small">
-                                                <h3 class="heading-small">Get your keys</h3>
-                                            </div>
-                                            <p>Nulla vel bibendum purus. Etiam tempus quam vel pulvinar rutrum. Duis semper, metus vitae fermentum consequat.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section-feature-1">
-                    <div class="page-padding">
-                        <div class="container-large">
-                            <div class="w-layout-grid feature-component">
-                                <div class="feature-content">
-                                 <div class="margin-bottom margin-medium">
-                                    <div class="align-left">
-                                       <div data-w-id="81612592-cf24-b000-fd0a-3a4a7f9016ce" opacity: 1; transform-style: preserve-3d;" class="tagline-wrapper">
-                                          <div class="text-size-small text-weight-medium">Comfort first</div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="margin-bottom margin-medium">
-                                    <h2 data-w-id="1516e1a1-980f-f651-641e-4e17f6e54e20"  class="heading-xlarge">The best houses for family comfort</h2>
-                                 </div>
-                                 <p data-w-id="1516e1a1-980f-f651-641e-4e17f6e54e22" class="text-size-medium">Ectus ipsum faucibus justo, et semper quam nisl in nibh. Proin sollicitudin, lorem non posuere blandit.</p>
-                                 <div class="margin-top margin-medium">
+                                <p data-w-id="1516e1a1-980f-f651-641e-4e17f6e54e22" class="text-size-medium" data-i18="ijust">I just hit his throat, and always like the players at the level. For this reason, it is recommended not to put it on the internet.</p>
+                                <div class="margin-top margin-medium">
                                     <div class="button-row">
-                                       <a data-w-id="1516e1a1-980f-f651-641e-4e17f6e54e27" href="#" class="button-secondary w-button">Explore properties</a>
-                                       <a data-w-id="4bd9c214-e658-5f3e-a617-f856b4420b23"  href="#" class="link-primary w-inline-block">
-                                          <div class="navbar-link w-nav-link">Contact agent</div>
-                                          <div class="icon-xsmall">chevron_right</div>
-                                       </a>
-                                    </div>
-                                 </div>
-                              </div>
-                                <div class="split-image-wrapper">
-                                    <img src="assets/6279692cf3e5b366974efa28.jpeg" data-w-id="1516e1a1-980f-f651-641e-4e17f6e54e2f"  alt="" class="split-image"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section-feature-2">
-                    <div class="page-padding">
-                        <div class="container-large">
-                            <div class="padding-vertical padding-xxhuge">
-                                <div class="w-layout-grid feature-2-component">
-                                    <div id="w-node-df6cec2b-e276-52c6-53f0-5d6cfaed2335-e7a8dc76" class="split-image-wrapper">
-                                        <img src="assets/627b183d66f06c1f64d131a8_J5HJzStn8n8.jpg" data-w-id="df6cec2b-e276-52c6-53f0-5d6cfaed2336" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 90vw, 43vw" alt="" class="split-image"/>
-                                    </div>
-                                  <div class="feature-content">
-                                   <div class="margin-bottom margin-medium">
-                                      <div class="align-left">
-                                         <div data-w-id="95bbbdc7-a538-a566-0415-cf1bca0ae166" class="tagline-wrapper">
-                                            <div class="text-size-small text-weight-medium">Quick and easy</div>
-                                         </div>
-                                      </div>
-                                   </div>
-                                   <div class="margin-bottom margin-medium">
-                                      <h2 data-w-id="df6cec2b-e276-52c6-53f0-5d6cfaed2315" class="heading-xlarge">Fast forward process</h2>
-                                   </div>
-                                   <div class="margin-bottom margin-large">
-                                      <p data-w-id="df6cec2b-e276-52c6-53f0-5d6cfaed2318"  class="text-size-medium">Ut vitae nisi eu nisi maximus condimentum ac id purus. Duis sit amet mi arcu praesent nec felis nisl.</p>
-                                   </div>
-                                   <div class="w-layout-grid feature-item-list">
-                                      <div data-w-id="df6cec2b-e276-52c6-53f0-5d6cfaed231b" class="feature-2-item">
-                                         <div class="margin-bottom margin-small">
-                                            <div class="icon-wrapper">
-                                               <div class="icon-1x1-medium">payments</div>
-                                            </div>
-                                         </div>
-                                         <div class="margin-bottom margin-small">
-                                            <h3 class="heading-xsmall">Affordable prices</h3>
-                                         </div>
-                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
-                                      </div>
-                                      <div data-w-id="a6ccf490-acda-e36f-a854-a229d8a1d607"  class="feature-2-item">
-                                         <div class="margin-bottom margin-small">
-                                            <div class="icon-wrapper">
-                                               <div class="icon-1x1-medium">description</div>
-                                            </div>
-                                         </div>
-                                         <div class="margin-bottom margin-small">
-                                            <h3 class="heading-xsmall">Less paper work</h3>
-                                         </div>
-                                         <p>Curabitur porta luctus semper donec eget lobortis leo ac finibus nisi.</p>
-                                      </div>
-                                   </div>
-                                   <div class="margin-top margin-medium">
-                                      <div class="button-row">
-                                         <a data-w-id="aaca80c7-1b66-d480-0ae3-e9464c332ac4"  href="#" class="button-secondary w-button">Explore properties</a>
-                                         <a data-w-id="aaca80c7-1b66-d480-0ae3-e9464c332ac7" href="#" class="link-primary w-inline-block">
-                                            <div class="navbar-link w-nav-link">Contact agent</div>
-                                            <div class="icon-xsmall">chevron_right</div>
-                                         </a>
-                                      </div>
-                                   </div>
-                                </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section-properties">
-                    <div class="page-padding">
-                        <div class="container-large">
-                            <div class="padding-top padding-xxhuge">
-                                <div class="padding-bottom padding-xxxhuge">
-                                    <div class="margin-bottom margin-huge">
-                                        <div class="text-align-center">
-                                            <div class="max-width-large align-center">
-                                                <div class="margin-bottom margin-medium">
-                                                    <div class="tagline-align-center">
-                                                        <div data-w-id="8132cab9-b58f-4578-61e3-0af1149db525" class="tagline-wrapper">
-                                                            <div class="text-size-small text-weight-medium">Properties</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <h2 data-w-id="e33cfee7-8db2-f2f8-6dbf-ab1b1ae7b57e" class="heading-xlarge">Houses in your favorite area</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="properties-component">
-                                        <div class="properties-list-wrapper w-dyn-list">
-                                            <div role="list" class="properties-list w-dyn-items">
-                                                <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
-                                                    <a href="#" class="properties-item-link is-card w-inline-block">
-                                                        <div class="properties-image-wrapper">
-                                                            <img src="assets/627aa73372c045f74c62485e_ctyssSFmXmU.jpg" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 43vw, 29vw" class="properties-image"/>
-                                                            <div class="property-card-badge-gurkha w-condition-invisible">Rent</div>
-                                                            <div class="property-card-badge-sienna">Rent</div>
-                                                        </div>
-                                                        <div class="properties-item-content">
-                                                            <div class="properties-item-content-top">
-                                                                <div class="margin-bottom margin-small">
-                                                                    <div class="margin-bottom margin-xxsmall">
-                                                                        <h3 class="heading-small">Cozy studio in Los Angeles</h3>
-                                                                    </div>
-                                                                    <div  class="text-size-medium text-weight-semibold text-color-neutral-900">$ 1,200.00 USD</div>
-                                                                </div>
-                                                                <div class="properties-location-wrapper">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">place</div>
-                                                                    <div class="text-size-regular">2263 Southlea, Los Angeles</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="properties-details-wrapper">
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
-                                                                    <div class="text-size-regular">2</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bed</div>
-                                                                    <div class="text-size-regular">2</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
-                                                                    <div class="text-size-regular">840 sqft</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
-                                                    <a href="#" class="properties-item-link is-card w-inline-block">
-                                                        <div class="properties-image-wrapper">
-                                                            <img src="assets/627aa74caf6aa7b519fc0cf1_0JGRXomKXSw.jpeg"  alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 43vw, 29vw"  class="properties-image"/>
-                                                            <div class="property-card-badge-gurkha">Sale</div>
-                                                            <div class="property-card-badge-sienna w-condition-invisible">Sale</div>
-                                                        </div>
-                                                        <div class="properties-item-content">
-                                                            <div class="properties-item-content-top">
-                                                                <div class="margin-bottom margin-small">
-                                                                    <div class="margin-bottom margin-xxsmall">
-                                                                        <h3 class="heading-small">Tiny home in San Diego</h3>
-                                                                    </div>
-                                                                    <div class="text-size-medium text-weight-semibold text-color-neutral-900">$ 740,000.00 USD</div>
-                                                                </div>
-                                                                <div class="properties-location-wrapper">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">place</div>
-                                                                    <div class="text-size-regular">2569 El Segundo, San Diego</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="properties-details-wrapper">
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
-                                                                    <div class="text-size-regular">1</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bed</div>
-                                                                    <div class="text-size-regular">2</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
-                                                                    <div class="text-size-regular">400 sqft</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
-                                                    <a href="#" class="properties-item-link is-card w-inline-block">
-                                                        <div class="properties-image-wrapper">
-                                                            <img src="assets/627aa76abc692125abd51a84_TZ_Aj8a5SW8.jpeg"  alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 43vw, 29vw" class="properties-image"/>
-                                                            <div class="property-card-badge-gurkha">Sale</div>
-                                                            <div class="property-card-badge-sienna w-condition-invisible">Sale</div>
-                                                        </div>
-                                                        <div class="properties-item-content">
-                                                            <div class="properties-item-content-top">
-                                                                <div class="margin-bottom margin-small">
-                                                                    <div class="margin-bottom margin-xxsmall">
-                                                                        <h3 class="heading-small">Crown house in New York</h3>
-                                                                    </div>
-                                                                    <div  class="text-size-medium text-weight-semibold text-color-neutral-900">$ 980,000.00 USD</div>
-                                                                </div>
-                                                                <div class="properties-location-wrapper">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">place</div>
-                                                                    <div class="text-size-regular">4489 Smity Fielda, New York</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="properties-details-wrapper">
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
-                                                                    <div class="text-size-regular">2</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bed</div>
-                                                                    <div class="text-size-regular">4</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
-                                                                    <div class="text-size-regular">3200 sqft</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
-                                                    <a href="#" class="properties-item-link is-card w-inline-block">
-                                                        <div class="properties-image-wrapper">
-                                                            <img src="assets/627aa795dfe83c856bbc9e50_4aUlVunKI7s.jpeg"   alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 43vw, 29vw" class="properties-image"/>
-                                                            <div class="property-card-badge-gurkha w-condition-invisible">Rent</div>
-                                                            <div class="property-card-badge-sienna">Rent</div>
-                                                        </div>
-                                                        <div class="properties-item-content">
-                                                            <div class="properties-item-content-top">
-                                                                <div class="margin-bottom margin-small">
-                                                                    <div class="margin-bottom margin-xxsmall">
-                                                                        <h3 class="heading-small">Family house in Los Angeles</h3>
-                                                                    </div>
-                                                                    <div class="text-size-medium text-weight-semibold text-color-neutral-900">$ 4,200.00 USD</div>
-                                                                </div>
-                                                                <div class="properties-location-wrapper">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">place</div>
-                                                                    <div class="text-size-regular">2263 Southlea, Los Angeles</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="properties-details-wrapper">
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
-                                                                    <div class="text-size-regular">2</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bed</div>
-                                                                    <div class="text-size-regular">3</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
-                                                                    <div class="text-size-regular">1400 sqft</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
-                                                    <a href="#" class="properties-item-link is-card w-inline-block">
-                                                        <div class="properties-image-wrapper">
-                                                            <img src="assets/627aa77efb5708313be60666_c0JoR_-2x3E.jpeg" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 43vw, 29vw" class="properties-image"/>
-                                                            <div class="property-card-badge-gurkha">Sale</div>
-                                                            <div class="property-card-badge-sienna w-condition-invisible">Sale</div>
-                                                        </div>
-                                                        <div class="properties-item-content">
-                                                            <div class="properties-item-content-top">
-                                                                <div class="margin-bottom margin-small">
-                                                                    <div class="margin-bottom margin-xxsmall">
-                                                                        <h3 class="heading-small">Studio in  Las Vegas</h3>
-                                                                    </div>
-                                                                    <div class="text-size-medium text-weight-semibold text-color-neutral-900">$ 820,000.00 USD</div>
-                                                                </div>
-                                                                <div class="properties-location-wrapper">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">place</div>
-                                                                    <div class="text-size-regular">2569 Halls Corner, Las Vegas</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="properties-details-wrapper">
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
-                                                                    <div class="text-size-regular">2</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bed</div>
-                                                                    <div class="text-size-regular">3</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
-                                                                    <div class="text-size-regular">2400 sqft</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
-                                                    <a href="#" class="properties-item-link is-card w-inline-block">
-                                                        <div class="properties-image-wrapper">
-                                                            <img src="assets/627aa7abc68836418986a376_GKTal6gI4P0.jpeg"  class="properties-image"/>
-                                                            <div class="property-card-badge-gurkha w-condition-invisible">Rent</div>
-                                                            <div class="property-card-badge-sienna">Rent</div>
-                                                        </div>
-                                                        <div class="properties-item-content">
-                                                            <div class="properties-item-content-top">
-                                                                <div class="margin-bottom margin-small">
-                                                                    <div class="margin-bottom margin-xxsmall">
-                                                                        <h3 class="heading-small">San Diego story</h3>
-                                                                    </div>
-                                                                    <div class="text-size-medium text-weight-semibold text-color-neutral-900">$ 3,700.00 USD</div>
-                                                                </div>
-                                                                <div class="properties-location-wrapper">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">place</div>
-                                                                    <div class="text-size-regular">2569 El Segundo, San Diego</div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="properties-details-wrapper">
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
-                                                                    <div class="text-size-regular">1</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">bed</div>
-                                                                    <div class="text-size-regular">2</div>
-                                                                </div>
-                                                                <div class="properties-details-item">
-                                                                    <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
-                                                                    <div class="text-size-regular">650 sqft</div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="margin-top margin-huge">
-                                            <div class="button-row justify-center">
-                                                <a data-w-id="52ed4e88-83d1-2f2e-c368-2ad7d702759b" href="#" class="button-secondary w-button">Explore properties</a>
-                                                <a data-w-id="f47c0f6f-044a-d5ed-95a5-b66345aa0be8" href="#" class="link-primary w-inline-block">
-                                                    <div class="navbar-link w-nav-link">Contact agent</div>
-                                                    <div class="icon-xsmall">chevron_right</div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="https://assets.website-files.com/6273e45912905c85aba8dc75/627568f8b027dc19c6c06c07_illustration-right-up.svg"  alt="" class="utility-graphic-right"/>
-                    <img src="https://assets.website-files.com/6273e45912905c85aba8dc75/627568f8b7eb2c2d7e437a61_illustration-left-down.svg"  alt="" class="utility-graphic-left"/>
-                </section>
-                <section class="section-locations">
-                    <div class="page-padding">
-                        <div class="container-large">
-                            <div class="padding-bottom padding-xxhuge">
-                                <div class="margin-bottom margin-huge">
-                                    <div class="text-align-center">
-                                        <div class="max-width-large align-center">
-                                            <div class="margin-bottom margin-small">
-                                                <h2 data-w-id="5fdc3690-4a13-d366-573b-f6294c83d9a5" class="heading-xlarge">Locations</h2>
-                                            </div>
-                                            <p data-w-id="0594a3ed-c745-d232-efb0-3d20a500489f" class="text-size-medium">Nunc mi ante, fringilla eget iaculis et, maximus vel purus integer lacus urna, aliquet non nisl sit amet.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="w-dyn-list">
-                                    <div role="list" class="locations-list w-dyn-items">
-                                        <div data-w-id="06784fdb-daf2-e9c8-960a-abf3b2bc78fb" role="listitem" class="location-wrapper w-dyn-item">
-                                            <a href="#" class="no-decoration w-inline-block">
-                                                <h3 class="heading-xsmall">San Francisco, CA</h3>
-                                            </a>
-                                            <a href="#" class="link-primary no-padding w-inline-block">
-                                                <div>View Properties</div>
-                                                <div class="icon-xsmall">chevron_right</div>
-                                            </a>
-                                        </div>
-                                        <div data-w-id="06784fdb-daf2-e9c8-960a-abf3b2bc78fb" role="listitem" class="location-wrapper w-dyn-item">
-                                            <a href="#" class="no-decoration w-inline-block">
-                                                <h3 class="heading-xsmall">Los Angeles, CA</h3>
-                                            </a>
-                                            <a href="#" class="link-primary no-padding w-inline-block">
-                                                <div>View Properties</div>
-                                                <div class="icon-xsmall">chevron_right</div>
-                                            </a>
-                                        </div>
-                                        <div data-w-id="06784fdb-daf2-e9c8-960a-abf3b2bc78fb" role="listitem" class="location-wrapper w-dyn-item">
-                                            <a href="#" class="no-decoration w-inline-block">
-                                                <h3 class="heading-xsmall">San Diego, CA</h3>
-                                            </a>
-                                            <a href="" class="link-primary no-padding w-inline-block">
-                                                <div>View Properties</div>
-                                                <div class="icon-xsmall">chevron_right</div>
-                                            </a>
-                                        </div>
-                                        <div data-w-id="06784fdb-daf2-e9c8-960a-abf3b2bc78fb" role="listitem" class="location-wrapper w-dyn-item">
-                                            <a href="#" class="no-decoration w-inline-block">
-                                                <h3 class="heading-xsmall">New York, NY</h3>
-                                            </a>
-                                            <a href="" class="link-primary no-padding w-inline-block">
-                                                <div>View Properties</div>
-                                                <div class="icon-xsmall">chevron_right</div>
-                                            </a>
-                                        </div>
-                                        <div data-w-id="06784fdb-daf2-e9c8-960a-abf3b2bc78fb" role="listitem" class="location-wrapper w-dyn-item">
-                                            <a href="#" class="no-decoration w-inline-block">
-                                                <h3 class="heading-xsmall">Las Vegas, NV</h3>
-                                            </a>
-                                            <a href="" class="link-primary no-padding w-inline-block">
-                                                <div>View Properties</div>
-                                                <div class="icon-xsmall">chevron_right</div>
-                                            </a>
-                                        </div>
-                                        <div data-w-id="06784fdb-daf2-e9c8-960a-abf3b2bc78fb" role="listitem" class="location-wrapper w-dyn-item">
-                                            <a href="#" class="no-decoration w-inline-block">
-                                                <h3 class="heading-xsmall">Miami, FL</h3>
-                                            </a>
-                                            <a href="" class="link-primary no-padding w-inline-block">
-                                                <div>View Properties</div>
-                                                <div class="icon-xsmall">chevron_right</div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="margin-top margin-huge">
-                                    <div class="button-row justify-center">
-                                        <a data-w-id="22cc7f53-3cfd-e54e-06d7-ec8d41eac42e" href="#" class="button-secondary w-button">Explore properties</a>
-                                        <a data-w-id="22cc7f53-3cfd-e54e-06d7-ec8d41eac430" href="#" class="link-primary w-inline-block">
-                                            <div class="navbar-link w-nav-link">Contact agent</div>
+                                        <a data-w-id="1516e1a1-980f-f651-641e-4e17f6e54e27" href="#" class="button-secondary w-button" data-i18="explore">Explore properties</a>
+                                        <a data-w-id="4bd9c214-e658-5f3e-a617-f856b4420b23" href="#" class="link-primary w-inline-block">
+                                            <div class="navbar-link w-nav-link" data-i18="agent">Contact agent</div>
                                             <div class="icon-xsmall">chevron_right</div>
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section-cta-1">
-                    <div class="page-padding">
-                        <div class="container-large">
-                            <div data-w-id="1fd1f4e0-5dd3-f62c-5d66-518862b1cbaf" class="cta-wrapper">
-                                <div class="padding-vertical padding-xhuge">
-                                    <div class="padding-horizontal padding-xlarge">
-                                        <div class="max-width-large align-center">
-                                            <div class="text-align-center">
-                                                <div class="margin-bottom margin-small">
-                                                    <div data-w-id="1fd1f4e0-5dd3-f62c-5d66-518862b1cbb5" class="icon-wrapper align-center is-white">
-                                                        <div class="icon-1x1-medium text-color-neutral-600">family_restroom</div>
-                                                    </div>
-                                                </div>
-                                                <div class="margin-bottom margin-medium">
-                                                    <h2 data-w-id="1fd1f4e0-5dd3-f62c-5d66-518862b1cbb9" class="heading-xlarge text-color-neutral-100">Families are our priority</h2>
-                                                </div>
-                                                <p data-w-id="1fd1f4e0-5dd3-f62c-5d66-518862b1cbbb" class="text-size-medium text-color-neutral-300">Curabitur eget aliquam elit. In mauris purus, auctor a eleifend non, placerat vel arcu. In non consectetur lorem. Morbi non varius sapien suscipit mauri.</p>
-                                                <div class="margin-top margin-medium">
-                                                    <a data-w-id="1fd1f4e0-5dd3-f62c-5d66-518862b1cbbf" href="#" class="button w-button">Get started</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="split-image-wrapper">
+                                <img src="assets/6279692cf3e5b366974efa28.jpeg" data-w-id="1516e1a1-980f-f651-641e-4e17f6e54e2f" alt="" class="split-image" />
                             </div>
                         </div>
                     </div>
-                    <div class="cta-background"></div>
-                </section>
-                <section class="section-testimonial">
-                    <div class="page-padding">
-                        <div class="container-large">
-                            <div class="padding-vertical padding-xxxhuge">
-                                <div class="margin-bottom margin-huge">
-                                    <div class="text-align-center">
-                                        <div class="max-width-medium align-center">
-                                            <div class="margin-bottom margin-medium">
-                                                <h2 data-w-id="29d98053-7abe-dd8b-b256-11c942c3e28d" class="heading-xlarge">What customers say</h2>
-                                            </div>
-                                            <p data-w-id="29d98053-7abe-dd8b-b256-11c942c3e28f" class="text-size-medium">Faucibus orci luctus et ultrices posuere cubilia curae.</p>
-                                        </div>
-                                    </div>
+                </div>
+            </section>
+            <section class="section-feature-2">
+                <div class="page-padding">
+                    <div class="container-large">
+                        <div class="padding-vertical padding-xxhuge">
+                            <div class="w-layout-grid feature-2-component">
+                                <div id="w-node-df6cec2b-e276-52c6-53f0-5d6cfaed2335-e7a8dc76" class="split-image-wrapper">
+                                    <img src="assets/627b183d66f06c1f64d131a8_J5HJzStn8n8.jpg" data-w-id="df6cec2b-e276-52c6-53f0-5d6cfaed2336" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 90vw, 43vw" alt="" class="split-image" />
                                 </div>
-                                <div class="testimonial-component">
-                                    <div data-w-id="29d98053-7abe-dd8b-b256-11c942c3e292" class="card-item is-testimonial">
-                                        <div class="testimonial-item-content-wrapper">
-                                            <div class="testimonial-rating-wrapper">
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                            </div>
-                                            <div class="margin-bottom margin-large">
-                                                <div class="text-size-medium text-color-neutral-900">&quot;Aliquam erat volutpat. Nulla pretium nec urna et convallis. Ut varius mi lacus, nec molestie libero ultricies nec. Aenean lacinia dui elit, ut gravida quam.&quot;</div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-client">
-                                            <div class="testimonial-client-image-wrapper">
-                                                <img src="assets/Avatar_Image-2.png"  alt="" class="testimonial-customer-image"/>
-                                            </div>
-                                            <div class="testimonial-client-info">
-                                                <p class="text-size-regular text-weight-semibold text-color-neutral-900">Michael Webb</p>
-                                                <p class="text-size-regular">Customer</p>
+                                <div class="feature-content">
+                                    <div class="margin-bottom margin-medium">
+                                        <div class="align-left">
+                                            <div class="tagline-wrapper">
+                                                <div class="text-size-small text-weight-medium" data-i18="quik">Quick and easy</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div data-w-id="c0752706-7f6c-0f53-6c93-23902f25031b" class="card-item is-testimonial">
-                                        <div class="testimonial-item-content-wrapper">
-                                            <div class="testimonial-rating-wrapper">
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                            </div>
-                                            <div class="margin-bottom margin-large">
-                                                <div class="text-size-medium text-color-neutral-900">&quot;Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Morbi pretium iaculis ultricies. Aenean in leo vitae tortor.&quot;</div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-client">
-                                            <div class="testimonial-client-image-wrapper">
-                                                <img src="assets/Avatar_Image-1.png"  alt="" class="testimonial-customer-image"/>
-                                            </div>
-                                            <div class="testimonial-client-info">
-                                                <p class="text-size-regular text-weight-semibold text-color-neutral-900">Amber Keene</p>
-                                                <p class="text-size-regular">Customer</p>
-                                            </div>
-                                        </div>
+                                    <div class="margin-bottom margin-medium">
+                                        <h2 data-w-id="df6cec2b-e276-52c6-53f0-5d6cfaed2315" class="heading-xlarge" data-i18="fast">Fast forward process</h2>
                                     </div>
-                                    <div data-w-id="6d9d8ede-c434-2898-82af-a02ecefbe14d" class="card-item is-testimonial">
-                                        <div class="testimonial-item-content-wrapper">
-                                            <div class="testimonial-rating-wrapper">
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                                <img src="assets/Star.svg"  alt="" class="star-icon"/>
-                                            </div>
-                                            <div class="margin-bottom margin-large">
-                                                <div class="text-size-medium text-color-neutral-900">&quot;Condimentum viverra orci. Pellentesque suscipit odio nisl, non ultricies purus mattis eget. In placerat, lorem a sodales ullamcorper, eros nibh laoreet nisl.&quot;</div>
-                                            </div>
-                                        </div>
-                                        <div class="testimonial-client">
-                                            <div class="testimonial-client-image-wrapper">
-                                                <img src="assets/Avatar_Image-0.png"  alt="" class="testimonial-customer-image"/>
-                                            </div>
-                                            <div class="testimonial-client-info">
-                                                <p class="text-size-regular text-weight-semibold text-color-neutral-900">Sarah Tarleton</p>
-                                                <p class="text-size-regular">Customer</p>
-                                            </div>
-                                        </div>
+                                    <div class="margin-bottom margin-large">
+                                        <p data-w-id="df6cec2b-e276-52c6-53f0-5d6cfaed2318" class="text-size-medium" data-i18="as">As in life, except for football, the most important sauce and that's pure. Let it be that my bow is present, and that no trigger is played.</p>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="section-latest-posts-1">
-                    <div class="page-padding">
-                        <div class="container-large">
-                            <div class="padding-vertical padding-xxhuge">
-                                <div class="latest-posts-1-component">
-                                    <div class="margin-bottom margin-huge">
-                                        <div class="heading-wrapper">
-                                            <div class="heading">
-                                                <div class="max-width-large text-align-left">
-                                                    <div class="margin-bottom margin-medium">
-                                                        <div class="align-left">
-                                                            <div data-w-id="2e75457b-58ae-2f6b-6956-03da353fc720" class="tagline-wrapper">
-                                                                <div class="text-size-small text-weight-medium">Blog</div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="margin-bottom margin-medium">
-                                                        <h2 data-w-id="2e75457b-58ae-2f6b-6956-03da353fc724" class="heading-xlarge">Latest posts</h2>
-                                                    </div>
-                                                    <p data-w-id="2e75457b-58ae-2f6b-6956-03da353fc726" class="text-size-medium">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae. Praesent efficitur nibh massa morbi sagittis ornare dui in ornare.</p>
+                                    <div class="w-layout-grid feature-item-list">
+                                        <div data-w-id="df6cec2b-e276-52c6-53f0-5d6cfaed231b" class="feature-2-item">
+                                            <div class="margin-bottom margin-small">
+                                                <div class="icon-wrapper">
+                                                    <div class="icon-1x1-medium">payments</div>
                                                 </div>
-                                            </div>
-                                            <div class="heading-button-row">
-                                                <a data-w-id="2e75457b-58ae-2f6b-6956-03da353fc729" href="" class="button-secondary w-button">View all</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="latest-posts-1-list-wrapper w-dyn-list">
-                                        <div role="list" class="latest-posts-1-list w-dyn-items">
-                                            <div data-w-id="2e75457b-58ae-2f6b-6956-03da353fc72d" role="listitem" class="card-item is-blog w-dyn-item">
-                                                <div class="latest-posts-1-item">
-                                                    <a href="#" class="latest-posts-1-image-wrapper w-inline-block">
-                                                        <img src="assets/627b18797d59a14bf143adb0_w94bzo75fBE.jpg" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 43vw, 29vw" class="latest-posts-1-image"/>
-                                                    </a>
-                                                    <div class="blog-item-content">
-                                                        <div class="blog-item-content-top">
-                                                            <div class="margin-bottom margin-small">
-                                                                <div class="blog-meta-wrapper">
-                                                                    <a href="#" class="blog-category w-inline-block">
-                                                                        <div class="text-size-small text-weight-medium">DIY</div>
-                                                                    </a>
-                                                                    <div class="text-size-small text-weight-medium">May 10, 2022</div>
-                                                                </div>
-                                                            </div>
-                                                            <a href="#" class="blog-title-wrapper w-inline-block">
-                                                                <h3 class="heading-small is-link">The ultimate checklist of 47 things you need before buying a property</h3>
-                                                            </a>
-                                                            <div class="text-size-regular">Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</div>
-                                                        </div>
-                                                        <a href="#" class="link-primary no-padding w-inline-block">
-                                                            <div>Read more</div>
-                                                            <div class="icon-xsmall">chevron_right</div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-w-id="2e75457b-58ae-2f6b-6956-03da353fc72d" role="listitem" class="card-item is-blog w-dyn-item">
-                                                <div class="latest-posts-1-item">
-                                                    <a href="#" class="latest-posts-1-image-wrapper w-inline-block">
-                                                        <img src="assets/627b1853798ae0aca74fbd74_w1ylyAGtdiA.jpg" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 43vw, 29vw" class="latest-posts-1-image"/>
-                                                    </a>
-                                                    <div class="blog-item-content">
-                                                        <div class="blog-item-content-top">
-                                                            <div class="margin-bottom margin-small">
-                                                                <div class="blog-meta-wrapper">
-                                                                    <a href="#" class="blog-category w-inline-block">
-                                                                        <div class="text-size-small text-weight-medium">Interviews</div>
-                                                                    </a>
-                                                                    <div class="text-size-small text-weight-medium">May 10, 2022</div>
-                                                                </div>
-                                                            </div>
-                                                            <a href="#" class="blog-title-wrapper w-inline-block">
-                                                                <h3 class="heading-small is-link">How to collaborate with real estate agents - everything you need to know</h3>
-                                                            </a>
-                                                            <div class="text-size-regular">Quisque tristique nec lectus non commodo. Morbi hendrerit ex ipsum, sit amet scelerisque lorem.</div>
-                                                        </div>
-                                                        <a href="#" class="link-primary no-padding w-inline-block">
-                                                            <div>Read more</div>
-                                                            <div class="icon-xsmall">chevron_right</div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div data-w-id="2e75457b-58ae-2f6b-6956-03da353fc72d" role="listitem" class="card-item is-blog w-dyn-item">
-                                                <div class="latest-posts-1-item">
-                                                    <a href="#" class="latest-posts-1-image-wrapper w-inline-block">
-                                                        <img src="assets/627b183d66f06c1f64d131a8_J5HJzStn8n8.jpg" loading="lazy" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 91vw, (max-width: 991px) 43vw, 29vw" class="latest-posts-1-image"/>
-                                                    </a>
-                                                    <div class="blog-item-content">
-                                                        <div class="blog-item-content-top">
-                                                            <div class="margin-bottom margin-small">
-                                                                <div class="blog-meta-wrapper">
-                                                                    <a href="#" class="blog-category w-inline-block">
-                                                                        <div class="text-size-small text-weight-medium">Enterior</div>
-                                                                    </a>
-                                                                    <div class="text-size-small text-weight-medium">May 10, 2022</div>
-                                                                </div>
-                                                            </div>
-                                                            <a href="#" class="blog-title-wrapper w-inline-block">
-                                                                <h3 class="heading-small is-link">The 11 most magnificent houses of March</h3>
-                                                            </a>
-                                                            <div class="text-size-regular">Dignissim eleifend sit amet mauris. Sed efficitur, eros finibus elementum tincidunt, lorem eros.</div>
-                                                        </div>
-                                                        <a href="#" class="link-primary no-padding w-inline-block">
-                                                            <div>Read more</div>
-                                                            <div class="icon-xsmall">chevron_right</div>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <footer class="footer-component">
-                    <div class="page-padding">
-                        <div class="container-large">
-                            <div class="padding-top padding-xxlarge">
-                                <div class="padding-bottom padding-xxlarge">
-                                    <div class="w-layout-grid footer-top-wrapper">
-                                        <div class="w-layout-grid footer-left-wrapper">
-                                            <a href="#" id="w-node-_9a8b5235-c156-4ab7-5c23-1afe9e477a1d-9e477a16" aria-current="page" class="footer-logo-link w-nav-brand w--current">
-                                                <img src="assets/Brand.svg"  alt=""/>
-                                            </a>
-                                            <div class="footer-link-list">
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <div class="text-size-regular text-weight-semibold text-color-neutral-900">Pages</div>
-                                                </div>
-                                                <a href="" aria-current="page" class="footer-link w--current">Home</a>
-                                                <a href="" class="footer-link">About</a>
-                                                <a href="" class="footer-link">Blog</a>
-                                                <a href="" class="footer-link">Agents</a>
-                                                <a href="" class="footer-link">Contact</a>
-                                                <a href="" class="footer-link">FAQs</a>
-                                                <a href="" class="footer-link">Properties</a>
-                                                <a href="" class="footer-link">Other </a>
-                                            </div>
-                                            <div class="footer-link-list">
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <div class="text-size-regular text-weight-semibold text-color-neutral-900">CMS Pages</div>
-                                                </div>
-                                                <a href="" class="footer-link">Property</a>
-                                                <a href="" class="footer-link">Property Single</a>
-                                                <a href="" class="footer-link">Blog Categories</a>
-                                                <a href="" class="footer-link">Blog Single </a>
-                                                <a href="" class="footer-link">Agent Single</a>
-                                            </div>
-                                            <div class="footer-link-list">
-                                                <div class="margin-bottom margin-xsmall">
-                                                    <div class="text-size-regular text-weight-semibold text-color-neutral-900">Utility Pages</div>
-                                                </div>
-                                                <a href="" class="footer-link">Style Guide</a>
-                                                <a href="" class="footer-link">Changelog</a>
-                                                <a href="" class="footer-link">Licenses</a>
-                                                <a href="" class="footer-link">404</a>
-                                                <a href="" class="footer-link">Password</a>
-                                                <a href="" class="footer-link">Search</a>
-                                            </div>
-                                        </div>
-                                        <div class="footer-right-wrapper">
-                                            <div class="margin-bottom margin-xsmall">
-                                                <div class="text-size-regular text-weight-semibold text-color-neutral-900">Subscribe</div>
                                             </div>
                                             <div class="margin-bottom margin-small">
-                                                <div class="text-size-regular">Join our newsletter to stay up to date on features and releases.</div>
+                                                <h3 class="heading-xsmall" data-i18="prices">Affordable prices</h3>
                                             </div>
-                                            <div class="footer-form-block w-form">
-                                              <form id="newsletter-footer-form" name="wf-form-Newsletter-Footer-Form" data-name="Newsletter Footer Form" method="get" class="footer-form" data-wf-page-id="6273e45912905c6ce7a8dc76" data-wf-element-id="9a8b5235-c156-4ab7-5c23-1afe9e477a55" aria-label="Newsletter Footer Form">
-                                                <input type="email" class="form-input is-last w-node-_9a8b5235-c156-4ab7-5c23-1afe9e477a56-9e477a16 w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email" id="email-2" required="">
-                                                <input type="submit" value="Subscribe" id="w-node-_9a8b5235-c156-4ab7-5c23-1afe9e477a57-9e477a16" class="button w-button">
-                                                <div id="w-node-_9a8b5235-c156-4ab7-5c23-1afe9e477a58-9e477a16" class="text-size-tiny">By subscribing you agree to with our <a href="">
-                                                  <span class="footer-link form-policy">Privacy Policy</span>
-                                                </a> and provide consent to receive updates from our company.</div>
+                                            <p data-i18="customer">The customer is very important, the customer will be followed by the customer. In fact, the casino is in the eros.</p>
+                                        </div>
+                                        <div data-w-id="a6ccf490-acda-e36f-a854-a229d8a1d607" class="feature-2-item">
+                                            <div class="margin-bottom margin-small">
+                                                <div class="icon-wrapper">
+                                                    <div class="icon-1x1-medium">description</div>
+                                                </div>
+                                            </div>
+                                            <div class="margin-bottom margin-small">
+                                                <h3 class="heading-xsmall" data-i18="less">Less paper work</h3>
+                                            </div>
+                                            <p data-i18="curabitur">Curabitur is always a porter of mourning until it needs a policy of time and ends.</p>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-credits">
-                        <div class="page-padding">
-                            <div class="container-large">
-                                <div class="padding-vertical padding-medium">
-                                    <div class="footer-bottom-wrapper">
-                                        <div class="w-layout-grid footer-legal-list">
-                                            <div id="w-node-_9a8b5235-c156-4ab7-5c23-1afe9e477a6e-9e477a16" class="footer-credit-text">
-                                                © Realco by <a href="https://www.google.com/" class="footer-link credits">Minimal Square</a>
-                                                .
-                                            </div>
-                                            <div id="w-node-_9a8b5235-c156-4ab7-5c23-1afe9e477a73-9e477a16" class="footer-credit-text is-top">
-                                                Powered by Realco .
-                                            </div>
-                                        </div>
-                                        <div class="w-layout-grid footer-social-list">
-                                            <a href="https://www.facebook.com/" class="footer-social-link w-inline-block">
-                                                <img src="assets/Facebook.svg"  alt="" class="social-icon"/>
-                                            </a>
-                                            <a href="https://www.instagram.com/" class="footer-social-link w-inline-block">
-                                                <img src="assets/Instagram.svg"  alt="" class="social-icon"/>
-                                            </a>
-                                            <a href="https://www.twitter.com/" class="footer-social-link w-inline-block">
-                                                <img src="assets/Twitter.svg"  alt="" class="social-icon"/>
-                                            </a>
-                                            <a href="https://www.linkedin.com/" class="footer-social-link w-inline-block">
-                                                <img src="assets/LinkedIn.svg"  alt="" class="social-icon"/>
+                                    <div class="margin-top margin-medium">
+                                        <div class="button-row">
+                                            <a data-w-id="aaca80c7-1b66-d480-0ae3-e9464c332ac4" href="#" class="button-secondary w-button" data-i18="explore">Explore properties</a>
+                                            <a data-w-id="aaca80c7-1b66-d480-0ae3-e9464c332ac7" href="#" class="link-primary w-inline-block">
+                                                <div class="navbar-link w-nav-link" data-i18="agent">Contact agent</div>
+                                                <div class="icon-xsmall">chevron_right</div>
                                             </a>
                                         </div>
                                     </div>
@@ -995,8 +320,376 @@
                             </div>
                         </div>
                     </div>
-                </footer>
-            </main>
+                </div>
+    </div>
+    </section>
+    <section class="section-properties">
+        <div class="page-padding">
+            <div class="container-large">
+                <div class="padding-top padding-xxhuge">
+                    <div class="padding-bottom padding-xxxhuge">
+                        <div class="margin-bottom margin-huge">
+                            <div class="text-align-center">
+                                <div class="max-width-large align-center">
+                                    <div class="margin-bottom margin-medium">
+                                        <div class="tagline-align-center">
+                                            <div class="tagline-wrapper">
+                                                <div class="text-size-small text-weight-medium" data-i18="prop">Properties</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h2 data-w-id="e33cfee7-8db2-f2f8-6dbf-ab1b1ae7b57e" class="heading-xlarge" data-i18="houses">Houses in your favorite area</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="properties-component">
+                            <div class="properties-list-wrapper w-dyn-list">
+                                <div role="list" class="properties-list w-dyn-items">
+                                    <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
+                                        <a href="#" class="properties-item-link is-card w-inline-block">
+                                            <div class="properties-image-wrapper">
+                                                <img src="assets/627aa73372c045f74c62485e_ctyssSFmXmU.jpg" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 43vw, 29vw" class="properties-image" />
+                                                <div class="property-card-badge-gurkha w-condition-invisible" data-i18="rent">Rent</div>
+                                                <div class="property-card-badge-sienna" data-i18="rent">Rent</div>
+                                            </div>
+                                            <div class="properties-item-content">
+                                                <div class="properties-item-content-top">
+                                                    <div class="margin-bottom margin-small">
+                                                        <div class="margin-bottom margin-xxsmall">
+                                                            <h3 class="heading-small" data-i18="cozy">Cozy studio in Los Angeles</h3>
+                                                        </div>
+                                                        <div class="text-size-medium text-weight-semibold text-color-neutral-900">$ 1,200.00 USD</div>
+                                                    </div>
+                                                    <div class="properties-location-wrapper">
+                                                        <div class="icon-1x1-small text-color-neutral-600">place</div>
+                                                        <div class="text-size-regular">2263 Southlea, Los Angeles</div>
+                                                    </div>
+                                                </div>
+                                                <div class="properties-details-wrapper">
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
+                                                        <div class="text-size-regular">2</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bed</div>
+                                                        <div class="text-size-regular">2</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
+                                                        <div class="text-size-regular">840 sqft</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
+                                        <a href="#" class="properties-item-link is-card w-inline-block">
+                                            <div class="properties-image-wrapper">
+                                                <img src="assets/627aa74caf6aa7b519fc0cf1_0JGRXomKXSw.jpeg" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 43vw, 29vw" class="properties-image" />
+                                                <div class="property-card-badge-gurkha">Sale</div>
+                                                <div class="property-card-badge-sienna w-condition-invisible" data-i18="sale">Sale</div>
+                                            </div>
+                                            <div class="properties-item-content">
+                                                <div class="properties-item-content-top">
+                                                    <div class="margin-bottom margin-small">
+                                                        <div class="margin-bottom margin-xxsmall">
+                                                            <h3 class="heading-small" data-i18="tiny">Tiny home in San Diego</h3>
+                                                        </div>
+                                                        <div class="text-size-medium text-weight-semibold text-color-neutral-900">$ 740,000.00 USD</div>
+                                                    </div>
+                                                    <div class="properties-location-wrapper">
+                                                        <div class="icon-1x1-small text-color-neutral-600">place</div>
+                                                        <div class="text-size-regular">2569 El Segundo, San Diego</div>
+                                                    </div>
+                                                </div>
+                                                <div class="properties-details-wrapper">
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
+                                                        <div class="text-size-regular">1</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bed</div>
+                                                        <div class="text-size-regular">2</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
+                                                        <div class="text-size-regular">400 sqft</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
+                                        <a href="#" class="properties-item-link is-card w-inline-block">
+                                            <div class="properties-image-wrapper">
+                                                <img src="assets/627aa76abc692125abd51a84_TZ_Aj8a5SW8.jpeg" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 43vw, 29vw" class="properties-image" />
+                                                <div class="property-card-badge-gurkha">Sale</div>
+                                                <div class="property-card-badge-sienna w-condition-invisible">Sale</div>
+                                            </div>
+                                            <div class="properties-item-content">
+                                                <div class="properties-item-content-top">
+                                                    <div class="margin-bottom margin-small">
+                                                        <div class="margin-bottom margin-xxsmall">
+                                                            <h3 class="heading-small" data-i18="crown">Crown house in New York</h3>
+                                                        </div>
+                                                        <div class="text-size-medium text-weight-semibold text-color-neutral-900">$ 980,000.00 USD</div>
+                                                    </div>
+                                                    <div class="properties-location-wrapper">
+                                                        <div class="icon-1x1-small text-color-neutral-600">place</div>
+                                                        <div class="text-size-regular">4489 Smity Fielda, New York</div>
+                                                    </div>
+                                                </div>
+                                                <div class="properties-details-wrapper">
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
+                                                        <div class="text-size-regular">2</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bed</div>
+                                                        <div class="text-size-regular">4</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
+                                                        <div class="text-size-regular">3200 sqft</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
+                                        <a href="#" class="properties-item-link is-card w-inline-block">
+                                            <div class="properties-image-wrapper">
+                                                <img src="assets/627aa795dfe83c856bbc9e50_4aUlVunKI7s.jpeg" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 43vw, 29vw" class="properties-image" />
+                                                <div class="property-card-badge-gurkha w-condition-invisible">Rent</div>
+                                                <div class="property-card-badge-sienna">Rent</div>
+                                            </div>
+                                            <div class="properties-item-content">
+                                                <div class="properties-item-content-top">
+                                                    <div class="margin-bottom margin-small">
+                                                        <div class="margin-bottom margin-xxsmall">
+                                                            <h3 class="heading-small" data-i18="family">Family house in Los Angeles</h3>
+                                                        </div>
+                                                        <div class="text-size-medium text-weight-semibold text-color-neutral-900">$ 4,200.00 USD</div>
+                                                    </div>
+                                                    <div class="properties-location-wrapper">
+                                                        <div class="icon-1x1-small text-color-neutral-600">place</div>
+                                                        <div class="text-size-regular">2263 Southlea, Los Angeles</div>
+                                                    </div>
+                                                </div>
+                                                <div class="properties-details-wrapper">
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
+                                                        <div class="text-size-regular">2</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bed</div>
+                                                        <div class="text-size-regular">3</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
+                                                        <div class="text-size-regular">1400 sqft</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
+                                        <a href="#" class="properties-item-link is-card w-inline-block">
+                                            <div class="properties-image-wrapper">
+                                                <img src="assets/627aa77efb5708313be60666_c0JoR_-2x3E.jpeg" alt="" sizes="(max-width: 479px) 100vw, (max-width: 767px) 92vw, (max-width: 991px) 43vw, 29vw" class="properties-image" />
+                                                <div class="property-card-badge-gurkha">Sale</div>
+                                                <div class="property-card-badge-sienna w-condition-invisible">Sale</div>
+                                            </div>
+                                            <div class="properties-item-content">
+                                                <div class="properties-item-content-top">
+                                                    <div class="margin-bottom margin-small">
+                                                        <div class="margin-bottom margin-xxsmall">
+                                                            <h3 class="heading-small" data-i18="studio">Studio in  Las Vegas</h3>
+                                                        </div>
+                                                        <div class="text-size-medium text-weight-semibold text-color-neutral-900">$ 820,000.00 USD</div>
+                                                    </div>
+                                                    <div class="properties-location-wrapper">
+                                                        <div class="icon-1x1-small text-color-neutral-600">place</div>
+                                                        <div class="text-size-regular">2569 Halls Corner, Las Vegas</div>
+                                                    </div>
+                                                </div>
+                                                <div class="properties-details-wrapper">
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
+                                                        <div class="text-size-regular">2</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bed</div>
+                                                        <div class="text-size-regular">3</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
+                                                        <div class="text-size-regular">2400 sqft</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div data-w-id="390d7a2d-1874-797f-4976-a3807b9b1200" role="listitem" class="properties-item w-dyn-item">
+                                        <a href="#" class="properties-item-link is-card w-inline-block">
+                                            <div class="properties-image-wrapper">
+                                                <img src="assets/627aa7abc68836418986a376_GKTal6gI4P0.jpeg" class="properties-image" />
+                                                <div class="property-card-badge-gurkha w-condition-invisible">Rent</div>
+                                                <div class="property-card-badge-sienna">Rent</div>
+                                            </div>
+                                            <div class="properties-item-content">
+                                                <div class="properties-item-content-top">
+                                                    <div class="margin-bottom margin-small">
+                                                        <div class="margin-bottom margin-xxsmall">
+                                                            <h3 class="heading-small" data-i18="san">San Diego story</h3>
+                                                        </div>
+                                                        <div class="text-size-medium text-weight-semibold text-color-neutral-900">$ 3,700.00 USD</div>
+                                                    </div>
+                                                    <div class="properties-location-wrapper">
+                                                        <div class="icon-1x1-small text-color-neutral-600">place</div>
+                                                        <div class="text-size-regular">2569 El Segundo, San Diego</div>
+                                                    </div>
+                                                </div>
+                                                <div class="properties-details-wrapper">
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bathtub</div>
+                                                        <div class="text-size-regular">1</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">bed</div>
+                                                        <div class="text-size-regular">2</div>
+                                                    </div>
+                                                    <div class="properties-details-item">
+                                                        <div class="icon-1x1-small text-color-neutral-600">square_foot</div>
+                                                        <div class="text-size-regular">650 sqft</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="margin-top margin-huge">
+                                <div class="button-row justify-center">
+                                    <a data-w-id="52ed4e88-83d1-2f2e-c368-2ad7d702759b" href="#" class="button-secondary w-button" data-i18="explore">Explore properties</a>
+                                    <a data-w-id="f47c0f6f-044a-d5ed-95a5-b66345aa0be8" href="#" class="link-primary w-inline-block">
+                                        <div class="navbar-link w-nav-link" data-i18="agent">Contact agent</div>
+                                        <div class="icon-xsmall">chevron_right</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </body>
+        <img src="https://assets.website-files.com/6273e45912905c85aba8dc75/627568f8b027dc19c6c06c07_illustration-right-up.svg" alt="" class="utility-graphic-right" />
+        <img src="https://assets.website-files.com/6273e45912905c85aba8dc75/627568f8b7eb2c2d7e437a61_illustration-left-down.svg" alt="" class="utility-graphic-left" />
+    </section>
+
+    <footer class="footer-component">
+        <div class="page-padding">
+            <div class="container-large">
+                <div class="padding-top padding-xxlarge">
+                    <div class="padding-bottom padding-xxlarge">
+                        <div class="w-layout-grid footer-top-wrapper">
+                            <div class="w-layout-grid footer-left-wrapper">
+                                <a href="#" id="w-node-_9a8b5235-c156-4ab7-5c23-1afe9e477a1d-9e477a16" aria-current="page" class="footer-logo-link w-nav-brand w--current">
+                                    <img src="assets/Brand.svg" alt="" />
+                                </a>
+                                <div class="footer-link-list">
+                                    <div class="margin-bottom margin-xsmall">
+                                        <div class="text-size-regular text-weight-semibold text-color-neutral-900">Pages</div>
+                                    </div>
+                                    <a href="" aria-current="page" data-i18="fhome" class="footer-link w--current">Home</a>
+                                    <a href="" class="footer-link" data-i18="fabout">About</a>
+                                    <a href="" class="footer-link"data-i18="fblog">Blog</a>
+                                    <a href="" class="footer-link"data-i18="fagent">Agents</a>
+                                    <a href="" class="footer-link"data-i18="fcontact">Contact</a>
+                                    <a href="" class="footer-link"data-i18="ffaq">FAQs</a>
+                                    <a href="" class="footer-link"data-i18="fprop">Properties</a>
+                                    <a href="" class="footer-link"data-i18="foth">Other </a>
+                                </div>
+                                <div class="footer-link-list">
+                                    <div class="margin-bottom margin-xsmall">
+                                        <div class="text-size-regular text-weight-semibold text-color-neutral-900" data-i18="CMS">CMS Pages</div>
+                                    </div>
+                                    <a href="" class="footer-link"data-i18="fprope">Property</a>
+                                    <a href="" class="footer-link"data-i18="fpropes">Property Single</a>
+                                    <a href="" class="footer-link"data-i18="fpropec">Blog Categories</a>
+                                    <a href="" class="footer-link"data-i18="fbs">Blog Single </a>
+                                    <a href="" class="footer-link"data-i18="fas">Agent Single</a>
+                                </div>
+                                <div class="footer-link-list">
+                                    <div class="margin-bottom margin-xsmall">
+                                        <div class="text-size-regular text-weight-semibold text-color-neutral-900" data-i18="up">Utility Pages</div>
+                                    </div>
+                                    <a href="" class="footer-link"data-i18="fsg">Style Guide</a>
+                                    <a href="" class="footer-link"data-i18="fcl">Changelog</a>
+                                    <a href="" class="footer-link"data-i18="fl">Licenses</a>
+                                    <a href="" class="footer-link"data-i18="ferr">404</a>
+                                    <a href="" class="footer-link"data-i18="fpasw">Password</a>
+                                    <a href="" class="footer-link"data-i18="fshrc">Search</a>
+                                </div>
+                            </div>
+                            <div class="footer-right-wrapper">
+                                <div class="margin-bottom margin-xsmall">
+                                    <div class="text-size-regular text-weight-semibold text-color-neutral-900"data-i18="fsbsc">Subscribe</div>
+                                </div>
+                                <div class="margin-bottom margin-small">
+                                    <div class="text-size-regular"data-i18="fjoin">Join our newsletter to stay up to date on features and releases.</div>
+                                </div>
+                                <div class="footer-form-block w-form">
+                                    <form id="newsletter-footer-form" name="wf-form-Newsletter-Footer-Form" data-name="Newsletter Footer Form" method="get" class="footer-form" data-wf-page-id="6273e45912905c6ce7a8dc76" data-wf-element-id="9a8b5235-c156-4ab7-5c23-1afe9e477a55" aria-label="Newsletter Footer Form">
+                                        <input type="email" class="form-input is-last w-node-_9a8b5235-c156-4ab7-5c23-1afe9e477a56-9e477a16 w-input" maxlength="256" name="email-2" data-name="Email 2" placeholder="Enter your email" id="email-2" required="">
+                                        <input type="submit" value="Subscribe" id="w-node-_9a8b5235-c156-4ab7-5c23-1afe9e477a57-9e477a16" class="button w-button">
+                                        <div  class="text-size-tiny"data-i18="fby">
+                                            By subscribing you agree to with our <a href="">
+                                                <span class="footer-link form-policy"data-i18="fpp">Privacy Policy</span>
+                                            </a data-i18="fandp"> and provide consent to receive updates from our company.
+                                        </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-credits">
+                <div class="page-padding">
+                    <div class="container-large">
+                        <div class="padding-vertical padding-medium">
+                            <div class="footer-bottom-wrapper">
+                                <div class="w-layout-grid footer-legal-list">
+                                    <div id="w-node-_9a8b5235-c156-4ab7-5c23-1afe9e477a6e-9e477a16" class="footer-credit-text" data-i18="fRealco">
+                                        © Realco by <a href="https://www.google.com/" class="footer-link credits" data-i18="fms">Minimal Square</a>
+                                        .
+                                    </div>
+                                    <div id="w-node-_9a8b5235-c156-4ab7-5c23-1afe9e477a73-9e477a16" class="footer-credit-text is-top" data-i18="fpow">
+                                        Powered by Realco .
+                                    </div>
+                                </div>
+                                <div class="w-layout-grid footer-social-list">
+                                    <a href="https://www.facebook.com/" class="footer-social-link w-inline-block">
+                                        <img src="assets/Facebook.svg" alt="" class="social-icon" />
+                                    </a>
+                                    <a href="https://www.instagram.com/" class="footer-social-link w-inline-block">
+                                        <img src="assets/Instagram.svg" alt="" class="social-icon" />
+                                    </a>
+                                    <a href="https://www.twitter.com/" class="footer-social-link w-inline-block">
+                                        <img src="assets/Twitter.svg" alt="" class="social-icon" />
+                                    </a>
+                                    <a href="https://www.linkedin.com/" class="footer-social-link w-inline-block">
+                                        <img src="assets/LinkedIn.svg" alt="" class="social-icon" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+    </main>
+    </div>
+</body>
+<script type="text/javascript" src="script.js"></script>
 </html>
