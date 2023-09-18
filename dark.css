@@ -222,7 +222,7 @@ body{
     border-width: 1px;
     border-color: #50577a;
     border-radius: .375rem;
-    background-color: #737373;
+    background-color: #fff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .08);
     -webkit-transition: background-color .2s cubic-bezier(.77, 0, .175, 1);
     transition: background-color .2s cubic-bezier(.77, 0, .175, 1);
