@@ -255,12 +255,12 @@ buttonElement.addEventListener("click", function () {
     if (isImage1) {
         // Если текущее изображение - первое, меняем на второе
         imageElement.src = "627b183d66f06c1f64d131a8_J5HJzStn8n8.jpg";
-        imageElement.alt = "Изображение 2";
+        imageElement.alt = "img 2";
         isImage1 = false;
     } else {
         // Если текущее изображение - второе, меняем на первое
         imageElement.src = "6279692cf3e5b366974efa28.jpeg";
-        imageElement.alt = "Изображение 1";
+        imageElement.alt = "img 1";
         isImage1 = true;
     }
 });
@@ -287,6 +287,3 @@ function ChangeTheme() {
 }
 
 applyThemeOnLoad();
-
-
-
